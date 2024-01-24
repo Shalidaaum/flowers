@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>W3.CSS Template</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+  <style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      font-family: "Poppins", sans-serif
+    }
+
+    body {
+      font-size: 16px;
+    }
+
+    .w3-half img {
+      margin-bottom: -6px;
+      margin-top: 16px;
+      opacity: 0.8;
+      cursor: pointer
+    }
+
+    .w3-half img:hover {
+      opacity: 1
+    }
+
+    .rounded-image {
+      border-radius: 50px;
+      /* ปรับตามความต้องการ */
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Sidebar/menu -->
+  <nav class="w3-sidebar w3-pink w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;"
+    id="mySidebar"><br>
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft"
+      style="width:100%;font-size:22px">Close Menu</a>
+    <div class="w3-container">
+      <h3 class="w3-padding-64"><b>Camellia flower</b></h3>
+    </div>
+    <div class="w3-bar-block">
+      <a href="project.html">
+        <h3 style="color:black;"><b>Back</b></h3>
+      </a>
+      <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">ดอกชาแสนสวย</a>
+      <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Camellia </a>
+      <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">About</a>
+      <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Culture</a>
+    </div>
+  </nav>
+
+  <!-- Top menu on small screens -->
+  <header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+    <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+    <span>Company Name</span>
+  </header>
+
+  <!-- Overlay effect when opening sidebar on small screens -->
+  <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
+    id="myOverlay"></div>
+
+  <!-- !PAGE CONTENT! -->
+  <div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+    <!-- Header -->
+    <div class="w3-container" style="margin-top:40px" id="showcase">
+      <h1 class="w3-jumbo"><b>ดอกคามิเลีย</b></h1>
+      <h1 class="w3-xxlarge w3-text-pink"><b>"ดอกชาแสนสวย"</b></h1>
+      <hr style="width:50px;border:5px solid red" class="w3-round">
+    </div>
+
+    <!-- Photo grid (modal) -->
+    <div class="w3-row-padding">
+    </div>
+
+    <!-- Modal for full size images on click-->
+    <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+      <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <img id="img01" class="w3-image">
+        <p id="caption"></p>
+      </div>
+    </div>
+
+    <!-- Services -->
+    <div class="w3-container" id="services" style="margin-top:10px">
+      <h5>ดอกไม้เมืองหนาวที่มีกลีบดอกแน่นเรียงตัวอย่างสมบูรณ์แบบราวกระโปรงแสนสวยของเจ้าหญิง มีหลายสี ตั้งแต่สีขาว สีชมพู
+        สีแดงสด ที่ใครเห็นก็อดไม่ได้ที่จะชื่นชอบ
+        โดยความจริงแล้วดอกคามิเลียที่เราเรียกกันเป็นดอกของพืชที่อยู่สกุลเดียวกับชา (tea) คือสกุล คามิเลีย (Camellia)
+        หากพูดถึงเฉพาะชนิดที่สำคัญจะถูกแบ่งออกเป็น คามิเลียที่นิยมใช้ใบชงเป็นเครื่องดื่ม หรืออาหาร มากกว่าจะรอชื่นชมดอก
+        เรียกว่า ชากินใบ ที่เรารู้จักกันดีนั้นอย่าง ชาเขียว ชาอู่หลง ชาเมี่ยง ชาฝรั่ง จนทาสชาต้องร้องอ๋อ !!!
+        คามิเลียบางชนิดก็ใช้ประโยชน์จากน้ำมันในเมล็ดเพื่อบริโภค เช่น ชาน้ำมัน (oil tea camellia) และ
+        คามิเลียที่นิยมปลูกประดับ หรือ ชาประดับ เช่น ชาญี่ปุ่น หรือ คามิเลียญี่ปุ่น (Japanese camellia) คามิเลีย
+        Sasanqua เป็นต้น และส่วนใหญ่ก็มักจะเรียกดอกชาประดับเหล่านี้รวมๆ ว่า “คามิเลีย”
+      </h5>
+      <h5>ดอกของคามิเลียพบว่ากระจายพันธุ์ในเขตเมืองหนาว สำหรับทวีปเอเชียจะพบมากแถบประเทศญี่ปุ่น เกาหลี
+        สาธารณรัฐประชาชนจีน มีดอกสีสวยโดดเด่น ละม้ายคล้ายดอกกุหลาบขนาดใหญ่ ใช้ประดับสวน ตกแต่งภูมิทัศน์
+        อย่างเกาะเชจูในประเทศเกาหลีรวมถึงหลายประเทศในเขตเมืองหนาว ที่มีเทศกาลชมสวนคามิเลีย ถือว่าฮอตฮิตไม่น้อยเลยทีเดียว
+        เพราะหลายคนไปเพื่อถ่ายรูปสวยๆ เก็บเป็นภาพประทับใจโดยเฉพาะคู่บ่าวสาว</h5>
+    </div>
+
+    <!-- Designers -->
+    <div class="w3-container" id="designers" style="margin-top:15px">
+      <h1 class="w3-xxxlarge w3-text-pink"><b>About.</b></h1>
+      <hr style="width:50px;border:5px solid red" class="w3-round">
+
+      <h5> ถึงแม้ดอกคามิเลียจะเป็นดอกไม้เมืองหนาว ทำให้หลายๆ คนคิดว่าคามิเลียมีต้นกำเนิดจากยุโรป
+        แต่ที่จริงแล้วการเพาะพันธุ์คามิเลียเริ่มต้นมาจากเอเชียตะวันออก
+        นี่เป็นเหตุผลที่ดอกคามิเลียปรากฏอยู่ในผลงานศิลปะต่างๆ ของประเทศจีนและประเทศญี่ปุ่น
+        ซึ่งได้รับอิทธิพลมาจากประเทศจีนอีกต่อหนึ่ง แต่ถึงอย่างนั้น ชื่อของคามิเลียก็ถูกตั้งตาม จอร์จ โจเซฟ คาเมล (Georg
+        Joseph Kamel) มิชชันนารีและนักพฤกษศาสตร์ชาวฟิลิปปินส์ที่นำดอกไม้ชนิดนี้ไปเยือนยุโรปในช่วงศตวรรษที่ 17 โดยคาร์ล
+        ลินนัส (Carl Linnaeus) นักพฤกษศาสตร์ชาวสวีเดนเป็นผู้ตั้งชื่อดอกไม้ชนิดนี้ว่า คามิเลีย ตามชื่อจอร์จ โจเซฟ คาเมล
+        เพื่อเป็นการให้เกียรติเขา 
+      </h5> <br>
+      
+    </div>
+
+    <!-- The Team -->
+    <div class="w3-row-padding ">
+      <div class="w3-col m4 w3-margin-bottom">
+        <div class="w3-white rounded-image">
+          <img class="rounded-image" src="คา1.jpg"  style="width:100% ">
+          <div class="w3-container">
+            
+           
+          </div>
+        </div>
+      </div>
+      <div class="w3-col m4 w3-margin-bottom">
+        <div class="w3-white rounded-image">
+          <img class="rounded-image" src="คา2.jpg" style="width:100%">
+          <div class="w3-container">
+           
+            
+          </div>
+        </div>
+      </div>
+      <div class="w3-col m4 w3-margin-bottom">
+        <div class="w3-white">
+          <img class="rounded-image" src="คา3.jpg" alt="Mike" style="width:110%">
+          <div class="w3-container">
+            
+         
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Contact -->
+    <div class="w3-container" id="contact" style="margin-top:15px">
+      <h1 class="w3-xxxlarge w3-text-pink"><b>Culture.</b></h1>
+      <hr style="width:50px;border:5px solid red" class="w3-round">
+      <h5>หากตัวแทนของความรักของวัฒนธรรมฝั่งยุโรปคือดอกกุหลาบแล้วละก็
+        ดอกคามิเลียก็เปรียบเสมือนสัญลักษณ์ของความรักในประเทศฝั่งตะวันออกอย่างจีนและญี่ปุ่น
+        นอกเหนือจากความหมายในเชิงสัญลักษณ์ที่ใกล้เคียงกันแล้ว ดอกคามิเลียยังมีลักษณะกลีบซ้อนที่คล้ายคลึงกับกุหลาบ
+        ทั้งยังได้รับการขนานนามว่าเป็น กุหลาบญี่ปุ่น (Rose of Japan) อีกด้วย</h5>
+      <h5>ดอกคามิเลีย หรือที่เรียกกันว่า สึบากิ
+        ในวัฒนธรรมญี่ปุ่นสื่อถึงจุดเริ่มต้นของฤดูใบไม้ผลิและนิยมนำมาใช้ประกอบพิธีกรรมศักดิ์สิทธิ์เพราะมีความหมายเป็นมงคล
+        ในญี่ปุ่นดอกสึบากิสีแดงสื่อถึงความรักที่สมบูรณ์แบบและความอ่อนน้อมถ่อมตน สึบากิสีขาว
+        หมายถึงความงามอันไร้ตำหนิและความรักในอุดมคติ และดอกสีเหลืองหมายถึงความปรารถนา คนญี่ปุ่นนิยมมอบดอกสึบากิให้คนรัก
+        และนิยมนำลวดลายดอกสึบากิสีแดงไปประดับตกแต่งในงานศิลปะแขนงต่างๆ
+
+      </h5>
+      <h5>ในประเทศจีน ดอกคามีเลีย หรือ ซานฉาฮวา (山茶花) นิยมมอบให้เป็นของขวัญสื่อถึงความรักและความซื่อสัตย์
+        กลีบดอกคามิเลียถือเป็นตัวแทนของเพศหญิง ส่วนก้านและฐานรองดอกเป็นตัวแทนของเพศชาย
+        อีกทั้งลักษณะที่สมมาตรเท่ากันทุกด้านทำให้ดอกคามิเลียเป็นสัญลักษณ์ของความสมบูรณ์แบบและความเป็นเลิศ
+        รวมถึงเป็นสัญลักษณ์ของโชคลาภและการเริ่มต้นของฤดูใบไม้ผลิในช่วงตรุษจีนด้วย</h5>
+
+      <div class="w3-container" id="contact" style="margin-top:15px">
+        <h1 class="w3-xxxlarge w3-text-pink"><b>Anecdote.</b></h1>
+        <hr style="width:50px;border:5px solid red" class="w3-round">
+        <h5>ในนวนิยายเรื่อง La Dame aux Camélias หรือ Camille (ชื่อภาษาอังกฤษ) ของ Alexandre Dumas
+          ตัวเอกของเรื่องคือมาร์เกอริท โกติเย่ร์ ได้รับการขนานนามว่า “หญิงสาวแห่งดอกคามิเลีย”
+          เพราะเธอใช้ดอกคามิเลียสื่อสารกับบรรดาคนรัก เธอใช้ดอกสีแดงสื่อถึงช่วงที่เธอมีประจำเดือน
+          และดอกสีขาวเพื่อบอกเหล่าคนรักว่าประจำเดือนของเธอหมดลงแล้ว
+
+          ดอกไม้สื่อความฝัน: ตามตำราเชื่อว่า หากฝันถึงดอกคามิเลีย แปลว่าคุณกำลังคิดถึงใครบางคนที่อยู่ห่างไกล
+
+          Love, Desire, and Perfection
+          ความรัก ความปรารถนา และความสมบูรณ์แบบ</h5>
+          <br>
+          <footer class="w3-container w3-white w3-padding-16 ">
+            <p><a href="https://rakdok.com/%E0%B8%84%E0%B8%B2%E0%B8%A1%E0%B8%B4%E0%B9%80%E0%B8%A5%E0%B8%B5%E0%B8%A2/"
+                    class="w3-button w3-pink w3-left">แหล่งที่มาของข้อมูล</a>
+
+</body>
+
+</html>

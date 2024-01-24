@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sakura Flowers</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: "Raleway", sans-serif;
+            color: #333;
+            /* เพิ่มสีข้อความเป็นสีเทาเข้ม */
+        }
+
+        /* ปรับแต่งเพิ่มเติมส่วนของ Sidebar/menu */
+        .w3-sidebar {
+            background-color: #f1f1f1;
+            padding-top: 64px;
+            font-weight: bold;
+            width: 300px;
+            position: fixed;
+            z-index: 3;
+            top: 0;
+            left: 0;
+            transition: 0.5s;
+        }
+
+        .w3-sidebar a {
+            padding: 16px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #000;
+            /* สีข้อความใน Sidebar */
+            display: block;
+            transition: 0.3s;
+        }
+
+        .w3-sidebar a:hover {
+            background-color: #ccc;
+            /* สีเวลา hover ใน Sidebar */
+        }
+
+        /* ปรับแต่งส่วนของ Top menu on small screens */
+        .w3-top {
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* ปรับแต่งส่วนของ Content */
+        .w3-main {
+            margin-left: 300px;
+            transition: margin-left 0.5s;
+        }
+
+        /* ปรับแต่งส่วนของ About section */
+        #about {
+            padding: 64px;
+            background-color: #e9e9e9;
+        }
+
+        /* ปรับแต่งส่วนของ Contact section */
+        #contact {
+            padding: 64px;
+            background-color: #f1f1f1;
+        }
+
+        /* ปรับแต่งส่วนของ Contact form */
+        .w3-light-grey {
+            background-color: #f9f9f9;
+        }
+
+        .w3-padding-large {
+            padding: 24px;
+        }
+
+        #w3_about_text {
+            color: #fff;
+        }
+
+        .mySlides {
+            display: none
+        }
+
+        .w3-left,
+        .w3-right,
+        .w3-badge {
+            cursor: pointer
+        }
+
+        .w3-badge {
+            height: 13px;
+            width: 13px;
+            padding: 0
+        }
+
+        .rounded-image {
+            border-radius: 50px;
+            /* ปรับตามความต้องการ */
+        }
+    </style>
+</head>
+
+<body class="w3-light-grey w3-content" style="max-width: 1600px">
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-bar-block w3-animate-left w3-text-grey w3-collapse w3-top w3-center"
+        style="z-index:3;width:300px;font-weight:bold " id="mySidebar">
+        <br>
+        <h3 class="w3-padding-64 w3-center w3-pink"><b>SAKURA</b></h3>
+        <a href="project.html">
+            <h3 style="color: brown;"><b>Back</b></h3>
+        </a>
+        <a href="javascript:void(0)" onclick="w3_close()"
+            class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
+
+        <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">About </a>
+        <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">Location</a>
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
+        <span class="w3-left w3-padding ">SOME NAME</span>
+        <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer"
+        title="close side menu" id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left: 300px">
+
+        <!-- Push down content on small screens -->
+        <div class="w3-hide-large" style="margin-top:83px"></div>
+
+        <h2 style="text-align: center; color: PaleVioletRed;">「桜花らんまんの美しい時節」</h2>
+
+        <h3 style="text-align: center; color: palevioletred;"> ฤดูดอกไม้ซากุระที่สวยงาม </h3>
+
+        <div class="w3-content w3-display-container" style="max-width:600px">
+            <img class="mySlides rounded-image" src="sakura_1.jpg" style="width:100%">
+            <img class="mySlides rounded-image" src="sakura_2.jpg" style="width:100%">
+            <img class="mySlides rounded-image" src="sakura_3.jpg" style="width:100%">
+            <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle"
+                style="width:100%">
+                <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+                <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+                <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+                <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+                <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+            </div>
+        </div>
+
+        <script>
+            var slideIndex = 1;
+            showDivs(slideIndex);
+
+            function plusDivs(n) {
+                showDivs(slideIndex += n);
+            }
+
+            function currentDiv(n) {
+                showDivs(slideIndex = n);
+            }
+
+            function showDivs(n) {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("demo");
+                if (n > x.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = x.length }
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" w3-white", "");
+                }
+                x[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " w3-white";
+            }
+        </script><br>
+
+
+        <!-- About section -->
+        <div class="w3-container w3-pink w3-center w3-text-light-grey w3-padding-32" id="about">
+            <h3 id="w3_about_text"><b>About </b></h3>
+            <h5 style="text-align: center;color: white;"> ซากูระ (ญี่ปุ่น: 桜, 櫻)
+                เป็นชื่อสามัญของพืชหลายชนิดจำพวกเชอร์รีในสกุล Prunus
+                อาทิ P. jamasakura, P.
+                serrulata เป็นต้น มีถิ่นกำเนิดในจีนตอนใต้, เกาะไต้หวัน, หมู่เกาะโอกินาวะ และหมู่เกาะญี่ปุ่น มีดอกสีขาว
+                กลีบแต่ละกลีบมีจำนวนแตกต่างกันไปตามชนิด ลักษณะเด่นของซากูระก็คือ เมื่อร่วง จะร่วงพร้อมกันหมด
+                ซากูระจึงเป็นสัญลักษณ์ของความเป็นทหารและวิถีความเป็นบูชิโดของญี่ปุ่น</h5>
+            <div class="w3-content w3-justify" style="max-width:600px">
+                <h3 style="color: white;"><b>My Name </b></h3>
+                <h5 style="color: white;">คำว่า "ซากูระ" ในภาษาญี่ปุ่นนั้นเชื่อกันว่ากร่อนมาจากคำว่า "ซากูยะ" (咲耶;
+                    หมายถึง ผลิบาน)
+                    อันเป็นชื่อของเทพธิดา "โคโนฮานาซากูยาฮิเม" (木花之開耶姫) ในเทพปกรณัมของญี่ปุ่น
+                    มีศาลบูชาของพระองค์อยู่บนยอดเขาฟูจิด้วย สำหรับพระนามของเทพธิดาองค์ดังกล่าวนั้น มีความหมายว่า
+                    "เจ้าหญิงดอกไม้บาน" และเนื่องจากซากูระเป็นดอกไม้ที่นิยมกันมากในญี่ปุ่นสมัยนั้น
+                    คำว่าดอกไม้ดังกล่าวจึงหมายถึงดอกซากูระนั่นเอง เทพธิดาองค์ดังกล่าวได้รับพระนามเช่นนั้น
+                    ก็เพราะมีเรื่องเล่ามาว่าทรงตกจากสวรรค์มาบนต้นซากูระ ดังนั้น
+                    ดอกซากูระจึงถือเป็นตัวแทนของดอกไม้ญี่ปุ่น ขณะที่รัฐบาลญี่ปุ่นประกาศให้ดอกเก๊กฮวย (ดอกเบญจมาศ)
+                    เป็นดอกไม้ประจำชาติ
+                </h5> <br>
+                <h3 style="color: white;">ซากุระมีสายพันธุ์กี่ชนิด และกี่สีกันแน่นะ?</h3>
+
+                <h5 style="color: white;"> รู้หรือไม่ ดอกซากุระ แท้จริงมีกลิ่นอ่อนจางจนแทบไม่รู้สึก
+                    หากต้องการดมกลิ่นชัดๆ
+                    ของมันจะต้องนำน้ำร้อนไปราดใส่ ดอกซากุระดอง จึงจะได้กลิ่นหอมหวานบางเบาลอยขึ้นมา ซากุระ
+                    เป็นดอกไม้ที่มีมากกว่า 300 สายพันธุ์ทั่วโลก มีหลายสีทั้งชมพู, ขาว, เหลือง และม่วง
+                    ลักษณะของดอกจะมีตั้งแต่ ห้ากลีบ ไปจนถึงหลายกลีบทับซ้อนกัน ตามแต่ละสายพันธุ์
+                    ในยุคเริ่มต้นสายพันธุ์ที่นิยมใน ประเทศญี่ปุ่น คือ Higan Sakura ซึ่งมีสีแดง
+                    ต่อมาได้มีการพัฒนาสายพันธุ์ขึ้นมาใหม่เป็นสีชมพูอ่อน
+                    และกลายเป็นสีที่ได้รับความนิยมมากที่สุดจนถึงปัจจุบัน
+                    สีสันของ ดอกซากุระ ยังแฝงความหมายไว้อีกด้วยนะ</h5><br>
+
+
+            </div>
+
+            <h5 style="text-align: left; color: #fff;">ดอกซากุระสีชมพู เป็นสัญลักษณ์ของความรัก ความโรแมนติก
+                ความอ่อนโยนและอ่อนหวาน<br>
+
+                ดอกซากุระสีขาว แทนความบริสุทธิ์ ไร้เดียงสา จิตวิญญาณ และความศักดิ์สิทธิ์<br>
+
+                ดอกซากุระสีเหลือง สื่อให้รู้สึกถึงความสุข มิตรภาพและความผูกพัน <br>
+
+                ดอกซากุระสีม่วง ให้ความรู้สึกถึงความสง่างาม เป็นตัวแทนของชนชั้นสูง</h5><br>
+            <img class="rounded-image" src="sa1.jpg" width="350" height="250"><img class="rounded-image" src="sa2.jpg"
+                width="350" height="250"><img class="rounded-image" src="sa3.jpg" width="350" height="250"><br>
+            <img class="rounded-image" src="sa4.jpg" width="350" height="250"><img class="rounded-image" src="sa5.jpg"
+                width="350" height="250"><br> <br>
+
+
+            <!-- Contact section -->
+            <div class="w3-container w3-light-grey w3-padding-32" id="contact">
+                <div class="w3-content" style="max-width: 800px">
+                    <h3 class="w3-center"><b>เทศกาลชมดอกซากุระ</b></h3>
+                    <h5>ดอกซากุระมีความสำคัญกับวิถีดำรงชีวิตของคนญี่ปุ่นมาก จนมีความเชื่อว่าหากดอกซากุระปลิวเข้ามา
+                        และร่วงหล่นบนชามข้าว เจ้าของชามข้าวนั้นจะได้รับโชคดี หรือข่าวดี ทำให้เกิดเป็นเทศกาล “ฮานามิ”
+                        เทศกาลชมดอกซากุระที่ชาวญี่ปุ่นจะออกไปนั่งปิกนิก รับประทานอาหารใต้ต้นซากุระ
+                        พร้อมชมความสวยงามไปด้วย เทศกาลฮานามิจะจัดช่วงเดือนกลางเดือนมีนาคม-เดือนเมษายน</h5>
+                </div>
+                <h4 style="text-align: left;"><b> - ชมดอกซากุระที่ไหนดี -</b></h4>
+                <h4 style="text-align: left;">1.ปราสาทนาโกย่า</h4>
+                <h5 style="text-align: left;">ปราสาทนาโกย่า ต้นซากุระที่ผลิบานโดยที่มีปราสาทนาโกย่าเป็นพื้นหลัง
+                    นับว่าเป็นความสวยงามที่นักท่องเที่ยวหลายคนต้องการไปเยือน</h5>
+                <h4 style="text-align: left;">2.ภูเขาโยชิโนะ</h4>
+                <h5 style="text-align: left;">ภูเขาโยชิโนะ
+                    หากต้องการขึ้นชมความงามของดอกซากุระบนเขาแนะนำเลยต้องไปที่เขาโยชิโนะที่ตั้งอยู่ในนารา
+                    เขาแห่งนี้มีความสวยงามของซากุระกว่า 30,000 ต้น ตั้งแต่ตีนเขาถึงยอดเขา อันมีสวยงามอย่างมาก
+                    จึงเป็นอีกที่ที่ผู้คนนิยมไปชมดอกซากุระกัน</h5>
+                <h4 style="text-align: left;">3.ปราสาทฮิโรซากิ</h4>
+                <h5 style="text-align: left;">ปราสาทฮิโรซากิ อาโอะโมริ จุดชมซากุระที่ติดอันดับ 1 ใน 5
+                    ของที่ที่ดีที่สุดทุกปี มีดอกซากุระกว่า 2,500 ต้น เรียงรายสวยงามเหมือนอุโมงค์ซากุระ
+                    มีพื้นที่มากพอที่ให้คนนั่งรับประทานอาหารพร้อมชมดอกไม้ไปด้วยอย่างไม่อึดอัด และยังมีกิจกรรมอื่น ๆ
+                    ให้ได้ทำกันอย่างมากมาย</h5>
+                <h4 style="text-align: left;">4.สวนอุเอะโนะ</h4>
+                <h5 style="text-align: left;">สวนอุเอะโนะมีซากุระมากกว่า 1,000
+                    ต้นและยังเดินทางได้สะดวกจึงเป็นที่ที่นักท่องเที่ยวนิยมมากที่สุด
+                    นับว่าเป็นแลนด์มาร์กแรกของนักท่องเที่ยวที่ต้องการชมดอกซากุระเลยทีเดียว
+
+                </h5>
+
+
+
+
+
+            </div>
+
+
+
+
+
+            <!-- Footer section -->
+            <footer class="w3-container w3-light-grey w3-padding-16 ">
+                <p><a href="https://th.wikipedia.org/wiki/%E0%B8%8B%E0%B8%B2%E0%B8%81%E0%B8%B9%E0%B8%A3%E0%B8%B0"
+                        class="w3-button w3-pink w3-left">แหล่งที่มาของข้อมูล</a>
+                </p>
+                <a href="https://artralux.co.th/travel-guide/sakura-a-cherry-blossom"
+                    class="w3-button w3-pink w3-left">รูปภาพและเนื้อหา</a>
+            </footer>
+
+        </div>
+
+</body>
+
+</html>

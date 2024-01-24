@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>W3.CSS Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: "Poppins", sans-serif
+        }
+
+        body {
+            font-size: 16px;
+        }
+
+        .w3-half img {
+            margin-bottom: -6px;
+            margin-top: 16px;
+            opacity: 0.8;
+            cursor: pointer
+        }
+
+        .w3-half img:hover {
+            opacity: 1
+        }
+
+        .rounded-image {
+            border-radius: 50px;
+
+            /* ปรับตามความต้องการ */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-light-blue w3-collapse w3-top w3-large w3-padding"
+        style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft"
+            style="width:100%;font-size:22px">Close Menu</a>
+        <div class="w3-container">
+            <h2 class="w3-padding-64"><b>HORTENSIA</b></h2>
+        </div>
+        <div class="w3-bar-block">
+            <a href="project.html">
+                <h3 style="color:white;"><b>Back</b></h3>
+            </a>
+            <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Hydrangea</a>
+            <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">About</a>
+            <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Type</a>
+            <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Anecdote</a>
+        </div>
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+        <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+        <span>Company Name</span>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
+        id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+        <!-- Header -->
+        <div class="w3-container" style="margin-top:80px" id="showcase">
+            <h1 class="w3-jumbo"><b>Hydrangea</b></h1>
+            <h1 class="w3-xxxlarge w3-text-red"><b>macrophylla</b></h1>
+            <hr style="width:100px;border:5px solid red" class="w3-round">
+        </div>
+        <h5>เป็นไม้ดอกที่มีอายุยืนหลายปีมีถิ่นกำเนิดในจีนและญี่ปุ่น</h5>
+        <h5>กลีบดอกหลากสีสันที่เราเห็นกันนั้นแท้จริงแล้วคือกลีบเลี้ยงของดอกไฮเดรนเยีย
+            กลีบดอกที่แท้จริงนั้นมีขนาดเล็กอยู่บริเวณใจกลางของโคนกลีบเลี้ยง และส่วนใหญ่ดอกมักจะเป็นหมัน</h5>
+        <ul>
+            <h5>
+                <li>ไฮเดรนเยียสีฟ้า หมายถึง ความเรียบง่าย เข้าอกเข้าใจ การให้อภัย</li>
+            </h5>
+            <h5>
+                <li> ไฮเดรนเยียสีม่วง หมายถึง ความหรูหรา มีเสน่ห์ที่น่าค้นหา</li>
+            </h5>
+        </ul>
+        <img class="rounded-image " src="hi1.jpg" width="400" height="250"> <img class="rounded-image" src="hi2.jpg"
+            width="400" height="250">
+
+
+        <!-- Modal for full size images on click-->
+        <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+            <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+            <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+                <img id="img01" class="w3-image">
+                <p id="caption"></p>
+            </div>
+        </div>
+
+        <!-- Services -->
+        <div class="w3-container" id="services" style="margin-top:15px">
+            <div class="w3-content w3-justify" style="max-width:600px">
+                <h1 class="w3-xxxlarge w3-text-red" style="text-align: center;"><b>ABOUT</b></h1>
+                <h5> ไฮเดรนเยีย เป็นดอกไม้ที่มีถิ่นกำเนิดมาจากจีนและญี่ปุ่น และขยายพันธุ์ไปยังหลายประเทศทั่วโลก
+                    รวมถึงในไทย
+                    เมื่อสมัยรัชกาลที่ 5 เนื่องจากพระองค์ชื่นชอบการปลูกดอกไม้ในพระราชวัง
+                    ปัจจุบันนิยมนำดอกไฮเดรนเยียมาประดับตกแต่งงานมงคล ตกแต่งเค้ก ขนม หรือจัดช่อมอบให้คนที่รักและห่วงใย
+                </h5>
+                <h5>ความหมายที่โด่งดังที่สุดของไฮเดรนเยียคือ ‘หัวใจอันเย็นชา’
+                    ทว่าความเย็นชาที่แท้จริงของเจ้าหล่อนเห็นจะไม่ใช่แค่ความหมาย หากแต่เป็นฤทธิ์ของส่วนต่างๆ
+                    ในลำต้นตั้งแต่ใบจนถึงรากที่มีพิษรุนแรง หากเผลอรับประทานเข้าไปอาจทำให้เกิดอาการท้องร่วง อาเจียน
+                    ระบบทางเดินหายใจติดขัด ไปจนถึงเสียชีวิตได้ หากใครชอบดอกไฮเดรนเยีย ก็แนะนำให้เดินทางไปบาหลี
+                    เพราะไฮเดรนเยียที่นั่นมีราคาถูกมาก
+                    และมีท้องทุ่งไฮเดรนเยียตระการตาที่แม้แต่คนในท้องถิ่นก็ไม่รู้ว่ามีให้ชม</h5>
+            </div>
+        </div>
+
+        <!-- Designers -->
+        <div class="w3-container" id="designers" style="margin-top:15px">
+            <h1 class="w3-xxxlarge w3-text-red"><b>TYPE</b></h1>
+            <hr style="width:50px;border:5px solid red" class="w3-round">
+            <h5>ไฮเดรนเยียเป็นไม้ดอกที่สามารถเปลี่ยนสีตามสภาพความเป็นกรดเป็นด่างของดิน และปริมาณธาตุอาหารที่ได้รับ เช่น
+                หากต้องการให้ไฮเดรนเยียมีสีชมพูให้ใช้ปุ๋ยที่มีจำนวนฟอสฟอรัสสูง
+                พร้อมกับใส่ปุ๋ยซุปเปอร์ฟอสเฟตเพิ่มให้ต้นละ 1 ช้อนชาทุกๆ 2 สัปดาห์ หรือต้องการให้มีสีฟ้า
+                ให้เติมอะลูมิเนียมซัลเฟตทุกๆ 2 สัปดาห์ เนื่องจากอะลูมิเนียมจะทำให้เนื้อเยื่อของดอกเกิดเป็นสีฟ้า</h5>
+            <ul>
+                <h5>
+                    <li> ไฮเดรนเยียสีชมพู หมายถึง ความอ่อนโยน คามรักที่เต็มไปด้วยความจริงใจ</li>
+                </h5>
+                <h5>
+                    <li>ไฮเดรนเยียสีขาว หมายถึง เป็นความบริสุทธิ์ใจของผู้ให้ที่มอบให้กับผู้รับ ความอดทน</li>
+                </h5>
+                <h5>
+                    <li>ไฮเดรนเยียสีเขียว หมายถึง ความสวยงามที่เป็นไปตามธรรมชาติ ไม่จำเป็นต้องปรุงแต่งสิ่งใดเพิ่ม</li>
+                </h5>
+            </ul>
+
+
+        </div>
+
+        <!-- The Team -->
+        <div class="w3-row-padding ">
+            <div class="w3-col m4 w3-margin-bottom rounded-image">
+                <div class="rounded-image  w3-light-grey">
+                    <img src="hi3.jpg" style="width:100% ">
+                    <div class=" rounded-image w3-container">
+                        <p class="w3-opacity">PINK</p>
+                        <p>ไฮเดรนเยียสีชมพู หมายถึง ความอ่อนโยน ความรักที่เต็มไปด้วยความจริงใจ</p>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-col m4 w3-margin-bottom">
+                <div class="rounded-image w3-light-grey">
+                    <img src="hi4.jpg" style="width:100%">
+                    <div class="w3-container">
+                        <p class="w3-opacity">WHITE</p>
+                        <p>ไฮเดรนเยียสีขาว หมายถึง เป็นความบริสุทธิ์ใจของผู้ให้ที่มอบให้กับผู้รับ ความอดทน</p>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-col m4 w3-margin-bottom">
+                <div class=" rounded-image w3-light-grey">
+                    <img src="hi5.jpg" style="width:100%">
+                    <div class="w3-container">
+                        <p class="w3-opacity">GREEN</p>
+                        <p>ไฮเดรนเยียสีเขียว หมายถึง ความสวยงามที่เป็นไปตามธรรมชาติ ไม่จำเป็นต้องปรุงแต่งสิ่งใดเพิ่ม</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Contact -->
+        <div class="w3-container" id="contact" style="margin-top:15px">
+            <h1 class="w3-xxxlarge w3-text-red"><b>ANECDOTE</b></h1>
+            <hr style="width:100px;border:5px solid red" class="w3-round">
+            <h3> <b>ทุ่งไฮเดรนเยีย เชียงใหม่ ทุ่งดอกไม้สวย<b></h3>
+            <h5 style="color:#00CED1;">1. ทุ่งไฮเดรนเยียอินทนนท์ สวนคุณทองดี</h5>
+
+            <img class="rounded-image" src="ทุ่ง1.jpg" width="400" height="300">
+            <h5 style="color:#00CED1;">เส้นทางเข้าไปยังสวน ไม่แนะนำสำหรับรถเล็กหรือรถเก๋ง เนื่องด้วยถนนจะเป็นทางลูกรัง
+                จึงจำเป็นต้องใช้รถของคนในพื้นที่เนื่องจากมีความชำนาญในการใช้เส้นทางและมีความปลอดภัยต่อผู้โดยสาร</h5>
+            <ul>
+                <h5>
+                    <li>ที่อยู่ : บ้านผาหมอน ตำบลบ้านหลวง อำเภอจอมทอง จังหวัดเชียงใหม่</li>
+                </h5>
+                <h5>
+                    <li>พิกัด : https://goo.gl/maps/JAou7xGYJH4rMSZ5A</li>
+                </h5>
+                <h5>
+                    <li>เปิดให้เข้าชม : 08.00-17.00 น. (เปิดให้เข้ามชมถึงต้นเดือนมกราคทมปีหน้า)</li>
+                </h5>
+                <h5>
+                    <li>โทร : 08-9998-4624</li>
+                </h5>
+            </ul>
+            <h5 style="color:#E9967A;">2. สวนดอกไฮเดรนเยีย ม่อนแจ่ม</h5>
+            <img class="rounded-image" src="ทุ่ง2.jpg" width="400" height="300">
+            <h5 style="color:#E9967A;">จะบานสวยที่สุดให้ได้เข้าชมในช่วงหน้าฝนแบบนี้ค่ะ ใครที่รอกันอยู่ ก็แวะไปเที่ยวได้เลย
+            เราจะได้เจอกับดอกไฮเดรนเยียสีฟ้าสวย ท่ามกลางความเขียวขจี และไอหมอก เรียกได้ว่าน่าประทับใจสุดๆ
+            อีกทั้งยังมีดอกไม้ชนิดอื่นๆ ที่ขึ้นแซมๆ ไปในสวน</h5>
+            <ul>
+                <h5>
+                    <li>ที่อยู่ : ตำบลแม่แรม อำเภอแม่ริม เชียงใหม่</li>
+                </h5>
+                <h5>
+                    <li>พิกัด : https://goo.gl/maps/g8JHbCa5v1waqurm7</li>
+                </h5>
+                <h5>
+                    <li>เปิดให้เข้าชม : 06.30-18.00 น.</li>
+                </h5>
+            </ul>
+            <h5 style="color:#DB7093">3. ทุ่งดอกไฮเดรนเยีย โครงการหลวงขุนแปะ</h5>
+            <img class="rounded-image" src="ทุ่ง3.jpg" width="400" height="300">
+            <ul>
+                <h5>
+                    <li>ที่อยู่ : โครงการหลวงขุนแปะ ตำบลบ้านแปะ อำเภอจอมทอง จังหวัดเชียงใหม่</li>
+                </h5>
+                <h5>
+                    <li>พิกัด : https://goo.gl/maps/dEkFuKguushJEpHi8</li>
+                </h5>
+                <h5>
+                    <li>เปิดให้เข้าชม : 06.00-18.00 น.</li>
+                </h5>
+            </ul>
+            
+
+            <br><a href="https://news.trueid.net/detail/dzXk48PvZ34W"
+                class="w3-button w3-purple">แหล่งที่มาของข้อมูล</a>
+            <a href="https://rakdok.com/%E0%B9%84%E0%B8%AE%E0%B9%80%E0%B8%94%E0%B8%A3%E0%B8%99%E0%B9%80%E0%B8%A2%E0%B8%B5%E0%B8%A2/"
+                class="w3-button w3-purple">RAKDOK</a>
+            <a href="https://travel.trueid.net/detail/B0MQYN6XZ580" class="w3-button w3-purple">รูปภาพและเนื้อหา</a>
+            <br><br>
+</body>
+
+</html>
